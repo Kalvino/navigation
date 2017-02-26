@@ -64,7 +64,7 @@ body{
 					border-top: 1px solid $blue;
 				} 
 			}
-			.project-active, .tutorial-active, .home-active, .connect-active{
+			.project-active, .home-active{
 				color: $gold;
 				&:hover{
 					color: $blue2;
