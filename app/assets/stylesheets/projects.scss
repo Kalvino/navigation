@@ -1,0 +1,115 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$gold: #9b7343;
+$blue:  #428bca;
+$blue2: #35558A;
+$dark: #222222;
+$dark-grey: #2A2A2A;
+$grey:#3E3E3E;
+$text-grey: #989898;
+$darker-text-grey: #6a6969;
+
+*{
+	box-sizing:border-box;
+}
+
+.clearfix:before, .clearfix:after{
+	content: "";
+	display: table;
+}
+
+.clearfix:after{
+	clear: both;
+}
+body{
+	background-color: $grey;
+	color: $text-grey;
+	p{
+		letter-spacing: .045em;
+		word-spacing: 0.2em;
+	}
+	a{
+		color: $blue;
+		text-decoration: none;
+		&:hover{
+			color: $blue2;
+		}
+	}
+	#main-navigation{
+		background-color: $dark;
+		padding: 	.8em 4em; 
+		position: fixed;
+		width: 99%;
+	  transition: top 0.2s ease-in-out;
+		#logo-link{
+		  float: left;
+		  text-decoration: none;
+		  padding-top:.5em;
+			.logo{
+				width:200px;
+			  height: 60px;
+			}
+		}
+		nav{
+			float: right;
+			padding-top: .5rem;
+			a{
+				color: $darker-text-grey;
+				text-decoration: none;
+				padding: 10px 15px;
+				font: 400 .9em/20px 'Play', 'Bree Serif', Georgia, serif;
+				&:hover{
+					color: $blue;
+					border-top: 1px solid $blue;
+				} 
+			}
+			.project-active, .tutorial-active, .home-active, .connect-active{
+				color: $gold;
+				&:hover{
+					color: $blue2;
+					border-bottom: none;
+				} 
+			}
+		}
+	}
+	.wrapper{
+		background-color: $dark-grey;
+		padding: 0 4em;
+		margin:0 auto; 
+		padding-top: 110px;	
+		//******display******
+		.display{
+			margin: 0 auto;
+			padding: 2em 0;
+
+			>.title{
+				text-align: center;
+				padding:2em 0;
+				font-size: 1rem;
+				text-transform: uppercase;
+				margin: 0;
+				margin-bottom: 1.5em;
+				span{
+					color: $blue;
+				}
+			}
+
+			.show, .index, .edit, .new{
+				header{
+					text-align: center;
+					.date{
+						font-size: .9em;
+						color: $darker-text-grey;
+					}
+					h2{
+						margin:0;
+						text-transform: uppercase;
+						font-size: 1em;
+						color: $text-grey;
+					}
+				}
+			}
+		}
+	}
+}

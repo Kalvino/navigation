@@ -1,0 +1,5 @@
+%header#main-navigation.nav-down
+	= link_to "Navigation", root_path, id: "logo-link"
+	%nav
+		= link_to "Home", root_path, class: "#{yield(:home_link)}"
+		= link_to "Projects", '/projects/index', class: "#{yield(:project_link)}"
